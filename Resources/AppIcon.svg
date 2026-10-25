@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- MenuBarClear app icon. © 2026 aafs-ops, MIT License. -->
+  <defs>
+    <clipPath id="squircle">
+      <rect x="100" y="100" width="824" height="824" rx="186" ry="186"/>
+    </clipPath>
+
+    <!-- Wallpaper -->
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"    stop-color="#2563EB"/>
+      <stop offset="0.45" stop-color="#7C3AED"/>
+      <stop offset="0.78" stop-color="#DB2777"/>
+      <stop offset="1"    stop-color="#F97316"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0.2" cy="0.18" r="0.55">
+      <stop offset="0" stop-color="#67E8F9" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#67E8F9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowSun" cx="0.82" cy="0.86" r="0.5">
+      <stop offset="0" stop-color="#FDE68A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FDBA74" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="duneBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4C1D95" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1E1B4B" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="duneFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#312E81" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#0F0A2E" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- The old, frosted menu bar dissolving away from left to right -->
+    <linearGradient id="oldBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#FFFFFF" stop-opacity="0.34"/>
+      <stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glass ripple -->
+    <radialGradient id="lens" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"    stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="0.65" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="1"    stop-color="#FFFFFF" stop-opacity="0.34"/>
+    </radialGradient>
+    <linearGradient id="glint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="0.4" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="1"   stop-color="#FFFFFF" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <!-- Top sheen -->
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Soft drop shadow -->
+  <rect x="104" y="118" width="816" height="816" rx="186" fill="#000" opacity="0.06"/>
+  <rect x="108" y="126" width="808" height="808" rx="186" fill="#000" opacity="0.045"/>
+  <rect x="112" y="134" width="800" height="800" rx="186" fill="#000" opacity="0.03"/>
+
+  <g clip-path="url(#squircle)">
+    <!-- Wallpaper -->
+    <rect x="100" y="100" width="824" height="824" fill="url(#sky)"/>
+    <rect x="100" y="100" width="824" height="824" fill="url(#glowCyan)"/>
+    <rect x="100" y="100" width="824" height="824" fill="url(#glowSun)"/>
+    <path d="M100 690 C 240 610, 360 640, 470 690 S 720 760, 924 640 L 924 924 L 100 924 Z" fill="url(#duneBack)"/>
+    <path d="M100 790 C 260 720, 420 760, 560 800 S 800 830, 924 760 L 924 924 L 100 924 Z" fill="url(#duneFront)"/>
+
+    <!-- Fading old menu bar background -->
+    <rect x="100" y="100" width="824" height="156" fill="url(#oldBar)"/>
+    <g fill="#FFFFFF">
+      <circle cx="470" cy="150" r="5" opacity="0.55"/>
+      <circle cx="505" cy="205" r="4" opacity="0.45"/>
+      <circle cx="540" cy="168" r="3.5" opacity="0.4"/>
+      <circle cx="575" cy="226" r="3" opacity="0.3"/>
+      <circle cx="600" cy="140" r="2.5" opacity="0.28"/>
+      <circle cx="628" cy="196" r="2" opacity="0.22"/>
+    </g>
+
+    <!-- Menus floating on the wallpaper -->
+    <g fill="#FFFFFF">
+      <circle cx="186" cy="178" r="20"/>
+      <rect x="232" y="164" width="104" height="28" rx="14"/>
+      <rect x="354" y="166" width="64"  height="24" rx="12" opacity="0.88"/>
+      <rect x="432" y="166" width="58"  height="24" rx="12" opacity="0.78"/>
+      <!-- status items -->
+      <rect x="766" y="160" width="36" height="36" rx="10" opacity="0.92"/>
+      <rect x="816" y="166" width="62" height="24" rx="12" opacity="0.92"/>
+    </g>
+
+    <!-- Liquid-glass ripple at the click point -->
+    <circle cx="660" cy="178" r="124" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="3"/>
+    <circle cx="660" cy="178" r="88"  fill="url(#lens)"/>
+    <circle cx="660" cy="178" r="88"  fill="none" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="3"/>
+    <path d="M 577 148 A 88 88 0 0 1 637 93" fill="none" stroke="url(#glint)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 743 208 A 88 88 0 0 1 704 254" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="660" cy="178" r="11" fill="#FFFFFF" opacity="0.95"/>
+
+    <!-- Sheen and edge -->
+    <rect x="100" y="100" width="824" height="824" fill="url(#sheen)"/>
+  </g>
+  <rect x="101.5" y="101.5" width="821" height="821" rx="185" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="3"/>
+</svg>
