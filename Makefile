@@ -1,8 +1,9 @@
 VERSION := $(shell tr -d '[:space:]' < VERSION)
 APP     := build/MenuBarClear.app
 ZIP     := build/MenuBarClear-$(VERSION).zip
+DMG     := build/MenuBarClear-$(VERSION).dmg
 
-.PHONY: all app install uninstall run zip clean
+.PHONY: all app install uninstall run dmg zip clean
 
 all: app
 
@@ -23,7 +24,11 @@ run: app
 	@pkill -x MenuBarClear 2>/dev/null || true
 	@open $(APP)
 
-## Build a release zip
+## Build the drag-to-install disk image (release download)
+dmg: app
+	@./scripts/make-dmg.sh
+
+## Build a plain zip of the app
 zip: app
 	@rm -f $(ZIP)
 	@ditto -c -k --keepParent $(APP) $(ZIP)

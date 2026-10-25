@@ -40,13 +40,13 @@ MenuBarClear never records, stores or sends anything. It only reads the small st
 
 ### Download
 
-1. Download the latest `MenuBarClear-x.y.z.zip` from [Releases](../../releases).
-2. Unzip it and move **MenuBarClear.app** to **Applications**.
-3. The release is not notarized, so remove the quarantine flag once:
+1. Download **`MenuBarClear-x.y.z.dmg`** from [Releases](../../releases).
+2. Open it and drag **MenuBarClear** onto **Applications**.
+3. The app isn't notarized yet, so the first time, right-click MenuBarClear in Applications and choose **Open**, then **Open** again. Or run:
    ```sh
    xattr -dr com.apple.quarantine /Applications/MenuBarClear.app
    ```
-4. Open MenuBarClear, allow both permissions when asked, then choose **Restart** from its menu bar icon.
+4. Allow both permissions when asked, then choose **Restart** from the MenuBarClear menu bar icon.
 
 ### Build from source
 
@@ -63,7 +63,8 @@ make install                    # builds, installs into /Applications and launch
 | `make app ARCHS="arm64 x86_64"` | Builds a universal app |
 | `make run` | Builds and launches from `build/` |
 | `make install` | Builds and installs into `/Applications` |
-| `make zip` | Builds a release zip |
+| `make dmg` | Builds the drag-to-install disk image |
+| `make zip` | Builds a plain zip of the app |
 | `make uninstall` | Removes the app, its settings and its permissions |
 
 > **Note:** every local build is ad-hoc signed, so macOS treats each rebuild as a new app. After rebuilding, remove the old MenuBarClear entries under System Settings → Privacy & Security → *Screen & System Audio Recording* and *Accessibility* (–), then allow it again.

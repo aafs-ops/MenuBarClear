@@ -16,3 +16,4 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Multi-display support, Spaces, full-screen apps and lock/unlock handling.
 - Instant menu redraw when switching apps (per-app cache; previous menus stay until new ones are ready).
 - `--list` diagnostics flag for bug reports.
+- Drag-to-install DMG with custom background and volume icon (`make dmg`).

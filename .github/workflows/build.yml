@@ -18,18 +18,18 @@ jobs:
         with:
           fetch-depth: 0          # build number = commit count
 
-      - name: Build universal app
-        run: make zip ARCHS="arm64 x86_64"
+      - name: Build universal app and disk image
+        run: make dmg ARCHS="arm64 x86_64"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: MenuBarClear
-          path: build/MenuBarClear-*.zip
+          path: build/MenuBarClear-*.dmg
 
       - name: Publish GitHub release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: build/MenuBarClear-*.zip
+          files: build/MenuBarClear-*.dmg
           generate_release_notes: true
